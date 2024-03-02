@@ -58,11 +58,15 @@ header p {
 }
 
 form {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
   margin-top: 38px;
   background: #fafafc;
   min-height: 300px;
 
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   padding: 64px;
 }
 
@@ -78,7 +82,7 @@ fieldset {
 
 fieldset legend {
   font-family: 'Archivo', sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 24px;
   line-height: 34px;
 
@@ -113,7 +117,8 @@ fieldset legend {
 }
 
 .input-wrapper input,
-.input-wrapper textarea {
+.input-wrapper textarea,
+.input-wrapper select {
   background: #fafafc;
 
   border: 1px solid #e6e6f0;
@@ -131,5 +136,103 @@ fieldset legend {
 
 .input-wrapper textarea {
   padding: 12px;
-  height: 168px;
+  min-height: 168px;
+  max-width: 608px;
+  min-width: 608px;
+}
+
+.input-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+
+  background: no-repeat right 24px top 50% url(./images/Select.svg);
+}
+
+.checkbox-wrapper {
+  font-size: 14px;
+  line-height: 24px;
+
+  position: relative;
+}
+
+.checkbox-wrapper label {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.checkbox-wrapper label::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  border: 1px solid #e6e6f0;
+  border-radius: 8px;
+
+  display: block;
+}
+
+.checkbox-wrapper input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+}
+
+.checkbox-wrapper input:checked + label::before {
+  background: no-repeat top 50% right 50% url(./images/Checkbox.svg);
+  border-color: #42d3ff;
+}
+
+.checkbox-wrapper input:focus + label::before {
+  outline: 2px solid black;
+}
+
+.col-3 {
+  display: flex;
+  gap: 20px;
+}
+
+.col-3 > div:nth-child(1) {
+  width: 100%;
+}
+
+footer {
+  background: #f0f0f4;
+
+  height: 136px;
+
+  display: flex;
+  flex-direction: column;
+  padding: 40px 64px;
+
+  border-top: 1px solid #d6d6d6;
+
+  margin-bottom: 100px;
+  border-radius: 0 0 10px 10px;
+}
+
+footer .button {
+  background: #04d361;
+  height: 56px;
+  border-radius: 10px;
+  border: 0;
+  color: #fff;
+
+  font-family: 'Archivo', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #15d46bb3;
+}
+
+input:invalid {
+  border: 1px solid #ff1010;
 }

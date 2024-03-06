@@ -1,4 +1,4 @@
-<h1 align="center"> Some Projects </h1>
+<h1 align="center"> Some Forms </h1>
 
 <p align="center">
 Um site para que eu possa mostrar pequenos projetos que estou fazendo.
@@ -23,7 +23,5 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Git e Github
 
 ## 💻 Projeto
-
-O DevLinks é um agregador de links para usar como cartão de visitas online.
 
 - [Acesse o projeto finalizado, online](https://walderwilliam.github.io/Training_Forms/)
